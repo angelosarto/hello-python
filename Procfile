@@ -1,1 +1,1 @@
-web: python hello.py
+web: uwsgi --socket 127.0.0.1:$PORT --protocol=http -s /tmp/uwsgi.sock --module hello --callable app
